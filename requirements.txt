@@ -1,0 +1,7 @@
+build
+wheel
+pyarrow
+numpy
+pandas
+faker
+pytest

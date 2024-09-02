@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+_gsdata_/
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+sdist/
+settings/
+*.egg-info/
+*.egg
+*.so
+*.c
+
+# Unit test / coverage reports
+.tox/
+test/
+
+# Sphinx documentation
+docs/_build/
+
+# Gsync data
+_gsdata_/

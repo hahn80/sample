@@ -1,0 +1,84 @@
+#######################################################################
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# Project configurations by Hanh Nguyen
+#######################################################################
+
+
+# Declaring the build backend
+[build-system]
+requires = ["setuptools>=61.0", "cython", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+# Basic information
+[project]
+name = "titan-sample"
+description = "Sampe project for Titan"
+requires-python = ">=3.8"
+keywords = ["Sample", "Project", "Python"]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+
+dynamic = ["version"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Cython",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "pyarrow",
+    "numpy",
+    "pandas",
+    "pytest",
+    "faker",
+]
+
+authors = [
+  { name="Hanh Nguyen", email="hanhnguyenvan@gmail.com" },
+  { name="Your Name", email="youremail@gmail.com" },
+]
+maintainers = [
+  {name = "Hanh Nguyen", email = "hanhnguyenvan@gmail.com"},
+  { name="Your Name", email="youremail@gmail.com" },
+]
+
+
+[project.scripts]
+#sample = "titan.sample.services.main:run"
+
+[project.urls]
+"Homepage" = "https://github.com/hahn80/sample"
+"Bug Tracker" = "https://github.com/hahn80/sample/issues"
+
+[project.optional-dependencies]
+test = ["pytest", "faker"]
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[tool.distutils.bdist_wheel]
+plat-name = "linux_x86_64"
+python-tag = "py3"
+universal = 0
+
+[tool.setuptools]
+include-package-data = false
+package-dir = {"" = "src"}
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
+
+[tool.setuptools.package-data]
+# "path.to.folder" = ["file.ext"]
+
+[tool.setuptools.exclude-package-data]
+# "path.to.folder" = ["file.ext"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "--capture=no"
+testpaths = ["src/tests"]
