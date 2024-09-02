@@ -4,7 +4,7 @@ A Sample Project for Titan
 1) Clone the sample project
 
 ```sh
-https://github.com/hahn80/sample
+git clone https://github.com/hahn80/sample
 ```
 
 2) Install required packages
