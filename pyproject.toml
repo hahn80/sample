@@ -81,4 +81,5 @@ exclude = ["tests"]
 [tool.pytest.ini_options]
 minversion = "8.0"
 addopts = "--capture=no"
-testpaths = ["src/tests"]
+testpaths = ["tests"]
+pythonpath = ["src"]

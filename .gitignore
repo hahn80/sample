@@ -19,7 +19,6 @@ settings/
 
 # Unit test / coverage reports
 .tox/
-test/
 
 # Sphinx documentation
 docs/_build/

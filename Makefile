@@ -2,7 +2,7 @@ build:
 	python -m build --wheel
 
 
-pytest:
+test:
 	pytest
 
 
