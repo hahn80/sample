@@ -83,3 +83,7 @@ minversion = "8.0"
 addopts = "--capture=no"
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.pyright]
+include = ["src", "tests"]
+extraPaths = ["src"]

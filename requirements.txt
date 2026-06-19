@@ -1,7 +1,8 @@
 build
 wheel
+faker
+pytest
 pyarrow
 numpy
 pandas
-faker
-pytest
+
